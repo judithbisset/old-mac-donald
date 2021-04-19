@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            text-align: center;
+            background-color: aqua;
+        }
+        p {
+            line-height: 30px;
+            font-weight: bold;
+            font-family: Helvetica;
+            font-size: 20px;
+            
+        }
+        button {
+            border-radius: 10px;
+        }
+    </style>
+    <h1>Old MacDonald had a farm</h1>
+    <img src="farm.jpg" width="400" />
+    <p>
+        Old MacDonald had a farm
+    </br>
+        Ee i ee i o
+        </br>
+        And on his farm he had some cows
+        </br>
+        Ee i ee i oh
+        </br>
+        With a moo-moo here
+        </br>
+        And a moo-moo there
+        </br>
+        Here a moo, there a moo
+        </br>
+        Everywhere a moo-moo
+        </br>
+        Old MacDonald had a farm
+        </br>
+        Ee i ee i o
+    </p>
+    <button>Click me</button>
+    <script>
+function changeLyrics() {
+        let animal = prompt("What are your favourite animals?")
+        let sound = prompt("What sound does that animal make?")
+        let p = document.querySelector("p")
+        if (animal != null  && sound != null  ) {
+            p.innerHTML = `Old MacDonald had a farm </br>
+            Ee i ee i o </br>
+            And on his farm he had some ${animal} </br>
+            Ee i ee i oh </br>
+            With a ${sound} ${sound} here </br>
+            And a ${sound} there </br>
+            Here a ${sound}, there a ${sound} </br>
+            Everywhere a ${sound}- ${sound} </br>
+            Old MacDonald had a farm </br>
+            Ee i ee i o`
+        }
+        else {
+            alert ("No thanks")
+        }
+    }
+        let lyricsButton = document.querySelector("button");
+        lyricsButton.addEventListener("click", changeLyrics);
+    
+
+    </script>
+</body>
+</html>
